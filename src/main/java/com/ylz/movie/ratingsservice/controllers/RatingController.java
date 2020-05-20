@@ -1,4 +1,4 @@
-package com.ylz.movie.ratingsservice.resources;
+package com.ylz.movie.ratingsservice.controllers;
 
 import com.ylz.movie.ratingsservice.models.Rating;
 import com.ylz.movie.ratingsservice.models.UserRating;
@@ -11,7 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/ratings")
-public class RatingResource {
+public class RatingController {
 
     @RequestMapping("/{movieId}")
     public Rating getRating(@PathVariable("movieId") String movieId) {
@@ -21,8 +21,8 @@ public class RatingResource {
     @RequestMapping("/users/{userId}")
     public UserRating getUserRatings(@PathVariable("userId") String userId) {
         List<Rating> ratings = Arrays.asList(
-                new Rating("123", 4),
-                new Rating("555", 3)
+                new Rating("770", 4),
+                new Rating("550", 3)
         );
 
         UserRating userRating = new UserRating();
